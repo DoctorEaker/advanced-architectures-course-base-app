@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Express
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Test files
+coverage/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
