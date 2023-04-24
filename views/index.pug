@@ -1,5 +1,61 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // Responsive navbar
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.position-absolute.w-100
+    .container
+      a.navbar-brand(href='#!') Bike Rental Shop
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='#!') Home
+          li.nav-item
+            a.nav-link(href='#!') Bikes
+          li.nav-item
+            a.nav-link(href='#!') Contact Us
+
+  // Header - set the background image for the header in the line below
+  header.py-5.bg-image-full(style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.43)), url('assets/hero.png');")
+    .text-center.my-5.min-vh-100.d-flex.flex-column.justify-content-center
+      h1.text-white.fs-3.fw-bolder Welcome to Bike Rental Shop
+      p.text-white-50.mb-0 Your one-stop destination for all your cycling needs
+
+
+  // Content section
+  section.py-5
+    .container.my-5
+      .row.justify-content-center
+        .col-lg-6
+          h2 Map of Active Bikes
+          p.lead Live view of all the bikes.
+          #main_map
+          p.mb-0
+            | Our friendly and knowledgeable staff are always ready to help you find the perfect bike for you.
+
+  // Image element - set the background image for the header in the line below
+  .py-5.bg-image-full(style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/complementary.png');")
+    // Put anything you want here! The spacer below with inline CSS is just for demo purposes!
+    div(style='height: 20rem;')
+
+  // Content section
+  section.py-5
+    .container.my-5
+      .row.justify-content-center
+        .col-lg-6
+          h2 Full Range of Bikes
+          p.lead Choose from our extensive selection of bikes for all types of cycling needs. From mountain bikes to road bikes and everything in between.
+          p.mb-0
+            | Our friendly and knowledgeable staff are always ready to help you find the perfect bike for you.
+
+  // Footer
+  footer.py-5.bg-dark
+    .container
+      p.m-0.text-center.text-white Copyright &copy; Bike Shop 2023
+
+  // Bootstrap core JS
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+
+  // Core theme JS
+  script(src='js/scripts.js')
